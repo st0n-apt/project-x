@@ -20,6 +20,8 @@
 Platform| Status
 ------------ | -------------
 Microsoft Windows | Developing
+macOS | Developing
+Linux | Developing
 Android  | Developing
 Browser | Developing
 
@@ -28,6 +30,8 @@ Browser | Developing
 - [Node JS](https://nodejs.org/en/)
 - [Angular](https://angular.io/)
 - [Mongodb](https://www.mongodb.com/)
+- [Electron](https://electronjs.org)
+- [Firebase](https://firebase.google.com/)
 
 
 Project-x is provided under the [MIT License](https://github.com/st0n-apt/project-x/blob/master/LICENSE).
