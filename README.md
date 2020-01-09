@@ -1,4 +1,4 @@
-# Project-x
+# Project-X
 
 <br />
 <br />
@@ -26,7 +26,7 @@ Browser | Developing
 #### Built With
 
 - [Node JS](https://nodejs.org/en/)
-- [Angular](https://angularjs.org/)
+- [Angular](https://angular.io/)
 - [Mongodb](https://www.mongodb.com/)
 
 
