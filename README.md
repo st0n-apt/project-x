@@ -13,9 +13,9 @@
 <div align="left">
 
 
-
-
 ## Developing
+
+We need some help developing!
 
 ### Platforms
 
@@ -50,7 +50,7 @@ Clone git repository with `git clone https://github.com/st0n-apt/project-x`
 Make sure you have all dependencies installed before trying to run the project!
 <br />
 
-Go to project-x/web and run it using `ng serve` to start the localhost at http://localhost:4200  
+Go to project-x/web and run it using `ng serve` to start the web server at http://localhost:4200  
 
 You can also use `ng serve` and `npm install && npm start` to use it as a Windows 10 app with Electron.
 <br />
