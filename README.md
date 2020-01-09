@@ -29,10 +29,29 @@ Browser | Developing
 
 - [Node JS](https://nodejs.org/en/)
 - [Angular](https://angular.io/)
-- [Mongodb](https://www.mongodb.com/)
 - [Electron](https://electronjs.org)
 - [Firebase](https://firebase.google.com/)
 
+### Dependencies required
+
+- [Nodejs Download (Win10)](https://nodejs.org/dist/v12.14.1/node-v12.14.1-x64.msi)
+
+Run `npm install -g @angular/cli` to install via [Angular.io](http://angular.io/).
+
+Run `npm install electron -g` to install via  [Electronjs.org](https://electronjs.org/)
+
+
+## Install Guide
+
+Clone git repository with `git clone https://github.com/st0n-apt/project-x`
+
+Go to project-x/web and run it using either `ng serve` to start the localhost at http://localhost:4200  or `ng serve` and `npm install && npm start` to use it as a Windows 10 app.
+
+### Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## License
 
 Project-x is provided under the [MIT License](https://github.com/st0n-apt/project-x/blob/master/LICENSE).
 

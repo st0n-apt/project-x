@@ -1,4 +1,4 @@
-# MyApp
+# Project X
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
@@ -21,6 +21,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Running electron app
+
+Run `npm install && npm start` to execute the electron app.
 
 ## Further help
 
