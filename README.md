@@ -15,6 +15,8 @@
 
 ## Developing
 
+We need some help developing!
+
 ### Platforms
 
 Platform| Status
