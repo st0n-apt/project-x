@@ -17,7 +17,6 @@
 
 ## Developing
 
-![Platforms](https://cdn0.iconfinder.com/data/icons/cloud-computing-service-and-data-storage/500/4-512.png)
 ### Platforms
 
 Platform| Status
