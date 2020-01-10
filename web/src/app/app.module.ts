@@ -6,11 +6,13 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { AlertsComponent } from './alerts/alerts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    AlertsComponent,
   ],
   imports: [
     BrowserModule,
