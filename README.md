@@ -55,6 +55,10 @@ Go to project-x/web and run it using `ng serve` to start the web server at http:
 You can also use `ng serve` and `npm install && npm start` to use it as a Windows 10 app with Electron.
 <br />
 
+## First Version
+![Project-X first_version](resources/first_version.png)
+
+
 ### Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
