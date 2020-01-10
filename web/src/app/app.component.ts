@@ -13,5 +13,5 @@ import {
   styleUrls: ['./app.component.css'], // hoja de estilos
 })
 export class AppComponent {
-  title = 'Music X';
+  title = 'MusicX';
 }
