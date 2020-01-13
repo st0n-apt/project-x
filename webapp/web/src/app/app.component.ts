@@ -5,10 +5,6 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 
-interface Post {
-  title: string;
-  content: string;
-}
 
 
 

@@ -4,8 +4,6 @@ import 'rxjs/add/operator/map';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 
 
-
-
 interface Post {
   title: string;
   content: string;
@@ -25,7 +23,7 @@ export class CreateContentComponent {
   postsCol: AngularFirestoreCollection<Post>;
   posts: Observable<Post[]>;
   constructor(private afs: AngularFirestore) {}
-  
+
   ngOnInit() {
     this.postsCol = this.afs.collection('posts');
     this.posts = this.postsCol.valueChanges();

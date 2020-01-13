@@ -1,29 +1,74 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
+  import { FirebaseService } from '../firebase.service';
+import { Router, Params } from '@angular/router';
 
-interface Post {
-  title: string;
-  content: string;
-}
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
-  postsCol: AngularFirestoreCollection<Post>;
-  posts: Observable<Post[]>;
+  ageValue: number = 0;
+  searchValue: string = "";
+  items: Array<any>;
+  age_filtered_items: Array<any>;
+  name_filtered_items: Array<any>;
 
-  constructor(private afs: AngularFirestore) {
-
-  }
+  constructor(
+    public firebaseService: FirebaseService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
-    this.postsCol = this.afs.collection('posts');
-    this.posts = this.postsCol.valueChanges();
+    this.getData();
+  }
+
+  getData(){
+    this.firebaseService.getUsers()
+    .subscribe(result => {
+      this.items = result;
+      this.age_filtered_items = result;
+      this.name_filtered_items = result;
+    })
+  }
+
+  viewDetails(item){
+    this.router.navigate(['/details/'+ item.payload.doc.id]);
+  }
+
+  capitalizeFirstLetter(value){
+    return value.charAt(0).toUpperCase() + value.slice(1);
+  }
+
+  searchByName(){
+    let value = this.searchValue.toLowerCase();
+    this.firebaseService.searchUsers(value)
+    .subscribe(result => {
+      this.name_filtered_items = result;
+      this.items = this.combineLists(result, this.age_filtered_items);
+    })
+  }
+
+  rangeChange(event){
+    this.firebaseService.searchUsersByAge(event.value)
+    .subscribe(result =>{
+      this.age_filtered_items = result;
+      this.items = this.combineLists(result, this.name_filtered_items);
+    })
+  }
+
+  combineLists(a, b){
+    let result = [];
+
+    a.filter(x => {
+      return b.filter(x2 =>{
+        if(x2.payload.doc.id == x.payload.doc.id){
+          result.push(x2);
+        }
+      });
+    });
+    return result;
   }
 
 }
