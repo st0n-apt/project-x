@@ -6,6 +6,11 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 
 
 
+interface Post {
+  title: string;
+  content: string;
+}
+
 @Component({
     selector: 'app-create-content',
     templateUrl: './create-content.component.html',
@@ -20,7 +25,7 @@ export class CreateContentComponent {
   postsCol: AngularFirestoreCollection<Post>;
   posts: Observable<Post[]>;
   constructor(private afs: AngularFirestore) {}
-
+  
   ngOnInit() {
     this.postsCol = this.afs.collection('posts');
     this.posts = this.postsCol.valueChanges();
